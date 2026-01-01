@@ -1,116 +1,103 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Admin Dashboard - Order & Agent</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f1f5f9; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard Admin</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="p-4 md:p-10">
+<body>
 
-    <div class="max-w-5xl mx-auto bg-white rounded-[40px] shadow-2xl overflow-hidden border border-gray-100">
-        
-        <div class="h-48 bg-slate-400 m-6 rounded-[30px] shadow-inner"></div>
+<div class="app">
 
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 p-8">
-            
-            <div class="md:col-span-8">
-                <h2 class="text-3xl font-extrabold text-[#002d62] mb-8">Formulir Pesanan Admin</h2>
-                
-                <form class="space-y-6">
-                    <div>
-                        <label class="block text-gray-700 font-semibold mb-2">Nama Pelanggan</label>
-                        <input type="text" class="w-full p-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="Masukkan nama pelanggan">
-                    </div>
+  <!-- Header -->
+  <div class="header">
+    <h2>Halo Admin, Selamat Bekerja!</h2>
+  </div>
 
-                    <div>
-                        <label class="block text-gray-700 font-semibold mb-2">Layanan (Kurir, Kebersihan, dll)</label>
-                        <div class="relative">
-                            <select class="w-full p-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none appearance-none cursor-pointer text-gray-500">
-                                <option>Pilih Layanan</option>
-                                <option>Kurir</option>
-                                <option>Kebersihan</option>
-                                <option>Laundry</option>
-                            </select>
-                            <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none text-gray-400">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-gray-700 font-semibold mb-2">Alamat Tujuan</label>
-                        <input type="text" class="w-full p-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="Alamat lengkap pengiriman">
-                    </div>
-
-                    <div>
-                        <label class="block text-gray-700 font-semibold mb-2">Catatan Tambahan</label>
-                        <textarea class="w-full p-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none transition h-32" placeholder="Catatan untuk agen..."></textarea>
-                    </div>
-
-                    <div>
-                        <label class="block text-gray-700 font-semibold mb-2">Pilih Agen</label>
-                        <select class="w-full p-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none appearance-none cursor-pointer text-gray-500">
-                            <option>Pilih Agen Berdasarkan Lokasi</option>
-                        </select>
-                    </div>
-
-                    <button type="submit" class="w-full bg-[#003d82] text-white text-lg font-bold py-5 rounded-2xl hover:bg-blue-900 transition-all shadow-lg active:scale-[0.98]">
-                        Buat Pesanan Sekarang
-                    </button>
-                </form>
-            </div>
-
-            <div class="md:col-span-4 bg-gray-50 p-6 rounded-[30px]">
-                <h2 class="text-xl font-bold text-[#002d62] mb-6">Agen Tersedia</h2>
-                
-                <div class="relative mb-8">
-                    <input type="text" class="w-full p-3 bg-white rounded-xl pl-10 text-sm shadow-sm outline-none border border-gray-100" placeholder="Cari agen...">
-                    <svg class="w-4 h-4 absolute left-3 top-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                </div>
-
-                <div class="space-y-8">
-                    <div class="flex items-start space-x-4">
-                        <img src="https://i.pravatar.cc/150?u=1" class="w-12 h-12 rounded-full object-cover shadow-sm">
-                        <div class="flex-1">
-                            <p class="font-bold text-gray-800">Budi Santoso</p>
-                            <div class="flex items-center text-[11px] text-green-500 font-bold mb-3">
-                                <span class="w-2 h-2 bg-green-500 rounded-full mr-1.5"></span> Online • Siap
-                            </div>
-                            <button class="bg-[#003d82] text-white text-xs font-bold px-4 py-2 rounded-lg hover:bg-blue-900 transition shadow-sm">Tugaskan</button>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start space-x-4 border-t border-gray-200 pt-6">
-                        <img src="https://i.pravatar.cc/150?u=2" class="w-12 h-12 rounded-full object-cover shadow-sm">
-                        <div class="flex-1">
-                            <p class="font-bold text-gray-800">Siti Aminah</p>
-                            <div class="flex items-center text-[11px] text-green-500 font-bold mb-3">
-                                <span class="w-2 h-2 bg-green-500 rounded-full mr-1.5"></span> Online • Siap
-                            </div>
-                            <button class="bg-[#003d82] text-white text-xs font-bold px-4 py-2 rounded-lg hover:bg-blue-900 transition shadow-sm">Tugaskan</button>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start space-x-4 border-t border-gray-200 pt-6">
-                        <img src="https://i.pravatar.cc/150?u=3" class="w-12 h-12 rounded-full object-cover shadow-sm">
-                        <div class="flex-1">
-                            <p class="font-bold text-gray-800">Hendra Wijaya</p>
-                            <div class="flex items-center text-[11px] text-green-500 font-bold mb-3">
-                                <span class="w-2 h-2 bg-green-500 rounded-full mr-1.5"></span> Online • Siap
-                            </div>
-                            <button class="bg-[#003d82] text-white text-xs font-bold px-4 py-2 rounded-lg hover:bg-blue-900 transition shadow-sm">Tugaskan</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+  <!-- Statistik -->
+  <section>
+    <h3>Statistik</h3>
+    <div class="stats">
+      <div class="card">
+        <span>Total Order</span>
+        <strong>381</strong>
+      </div>
+      <div class="card">
+        <span>Nominal Hari Ini</span>
+        <strong>Rp 23.500.000</strong>
+      </div>
+      <div class="card">
+        <span>Agen Aktif</span>
+        <strong>120</strong>
+        <small>120 / 150 agen</small>
+      </div>
     </div>
+  </section>
+
+  <!-- Alert -->
+  <div class="alert">
+    ⚠️ 5 order belum ditugaskan (terlama 12 menit)
+  </div>
+
+  <!-- Order Masuk -->
+  <section class="card-box">
+    <h3>Order Masuk</h3>
+
+    <div class="order">
+      <div>
+        <strong>Nama Customer</strong>
+        <small>Baru saja</small>
+      </div>
+      <button class="btn">Tugaskan</button>
+    </div>
+
+    <div class="order">
+      <div>
+        <strong>Nama Customer</strong>
+        <small>8 menit lalu</small>
+      </div>
+      <button class="btn outline">Rp 123.000</button>
+    </div>
+
+    <div class="order">
+      <div>
+        <strong>Nama Customer</strong>
+        <small>12 menit lalu</small>
+      </div>
+      <button class="btn outline">Rp 20.000</button>
+    </div>
+  </section>
+
+  <!-- Agent -->
+  <section class="card-box">
+    <h3>Agent Siap</h3>
+    <p class="sub">3 agent tersedia</p>
+
+    <div class="agent">
+      <span>Andi S. • Area A</span>
+      <span class="status green">Available</span>
+    </div>
+
+    <div class="agent">
+      <span>Budi W. • Area A</span>
+      <span class="status green">Available</span>
+    </div>
+
+    <div class="agent">
+      <span>Citra L. • Area B</span>
+      <span class="status green">Available</span>
+    </div>
+
+    <a class="link">Lihat Semua</a>
+  </section>
+
+  <!-- CTA -->
+  <a href="form-order.html" class="cta">
+    ➕ Buat Order Manual
+  </a>
+
+</div>
 
 </body>
 </html>
